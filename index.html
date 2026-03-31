@@ -132,7 +132,7 @@ window.fetch = function(resource, init) {
   return originalFetch.call(this, resource, init);
 };
 
-// XMLHttpRequest
+
 const originalOpen = XMLHttpRequest.prototype.open;
 XMLHttpRequest.prototype.open = function(method, url, ...rest) {
   const newURL = rewriteURL(url);
